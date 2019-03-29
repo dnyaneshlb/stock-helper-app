@@ -1,0 +1,13 @@
+
+<div  id="stock-selector-component">
+    <div id="stock-select-container">
+        <mat-form-field>
+            <input matInput placeholder="start typing name here" (keyup.enter)="switchToFundaMental()" style="width:30%">
+        </mat-form-field>
+        <button mat-raised-button color="primary" class="nav-item nav-link-edit" 
+            [routerLink]="['/fundamental']" 
+            routerLinkActive="router-link-active">
+            Start
+        </button>
+    </div>
+</div>

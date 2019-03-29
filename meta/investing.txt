@@ -1,0 +1,58 @@
+
+---------- This file lists all the things you need to do before engaging in a stock for swing trading ------------------------
+
+Fundamental Analysis
+	Pledged shares
+	FII DII Promoter share holding
+	EPS growth should be at least 9%
+	PAT on quarter to quarter basis
+	----- All This data can be found on moneycontrol	
+
+Find a list of stocks to keep away from
+	Operator Driven cos
+		prabhat dairy
+		infibeam
+		suntv
+		zeel
+		dlf
+	PSU cos
+	NBFCs
+	small banks
+
+
+Questions?
+ 	Is it a blue chip stock?----------------------
+	Is it oprator driven stock?-------------------------
+	Are you catching falling knife?--------------------------
+	How much you are convicted if its not blue chip?----------------
+	Reason for conviction?------------------
+	Are you allocating too much fund to this stock?
+	Are you buying in parts rather than one stop shop?
+	Have you done technical analysis?
+	What is the outcome of fubdamental analysis?
+	After Buying:
+		Have you bought this stock on closing minutes?
+		Do you need to average out this stock?
+		Do you think you need to add few more quantities after some days?
+
+Create a website for this questionaire. Add general analytics to decide what action should be taken.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+https://codepen.io/nuriarai/pen/uIrFf
+
+https://codepen.io/ArtemGordinsky/pen/GLkoC
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TODO : 
+Decision page
+What is the outcome of technical analysis? BUY NO BUY CONFUSED
+What is the outcome of fundamental analysis? BUY NO BUY CONFUSED
+Do you want to manage risk?
+		Capital?
+		Stock LTP?
+		give Recommendation to buy with 10% of capital  that too with in steps.
+
+Add stepper on each page.
