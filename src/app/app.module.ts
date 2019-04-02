@@ -19,7 +19,8 @@ import {MatButtonModule,
     MatSlideToggleModule,
     MatSliderModule,
     MatTooltipModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSnackBarModule
   } from '@angular/material';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -45,8 +46,8 @@ import { DecisionComponent } from './decision/decision.component';
     BrowserAnimationsModule,
     MatButtonModule, MatCardModule, MatIconModule,
     MatListModule, MatSidenavModule, MatToolbarModule,
-    MatSliderModule, MatTooltipModule,MatStepperModule,
-    MatInputModule, MatSlideToggleModule,
+    MatSliderModule, MatTooltipModule, MatStepperModule,
+    MatInputModule, MatSlideToggleModule, MatSnackBarModule,
     MatCheckboxModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     LayoutModule,

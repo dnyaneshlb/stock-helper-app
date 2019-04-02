@@ -1,134 +1,163 @@
 <div  id="fundamental-component">
-    <mat-icon class="material-icons" matTooltip="Falling Knife means a stock that has corrected big recently. 
-        Usually such stocks go further down. 
-        Its good to stay away from such stocks"> info</mat-icon>
-    <mat-slide-toggle
-        #fallingknife
-        color="primary"
-        labelPosition='before'>
-        Are you catching a falling knife
-    </mat-slide-toggle>
-    <br>
-    <div *ngIf="fallingknife.checked">
-        Why do you think you should catch falling knife?
-        <mat-form-field>
-            <textarea matInput placeholder="Reason for conviction" cols="50%"></textarea>
-        </mat-form-field>    
-    </div>
 
-    <br>
-    <div>
-        <mat-slide-toggle
-            #operatorstock
-            color="primary"
-            labelPosition='before'>
-            is is an operator driven stock?
-        </mat-slide-toggle>
-        <br>
-        <div *ngIf="operatorstock.checked">
-            Why do you think engage in operator driven stock?
-            <mat-form-field>
-                <textarea matInput placeholder="Reason for conviction" cols="50%"></textarea>
-            </mat-form-field>    
-        </div>
-    </div>
-
-    <br>
-    <div>
-        <mat-slide-toggle
-            #bluechipstock
-            color="primary"
-            labelPosition='before'>
-            is it a blue chip stock?
-        </mat-slide-toggle>
-        <br><br>
-        <div *ngIf="!bluechipstock.checked">
-            <div>
-                How much are you convicted if its not blue chip stock?
-                <mat-slider
-                    thumbLabel
-                    [displayWith] = "formatSliderLabel"
-                    tickInterval="10"
-                    min="1"
-                    color="primary"
-                    max="100"></mat-slider>
-            </div>
-            <div>
-                Why are you so much convicted if its not blue chip stock?
-                <mat-form-field>
-                    <textarea matInput placeholder="Reason for conviction" cols="50%"></textarea>
-                </mat-form-field>     
-            </div>
-        </div>
-    </div>
+    <mat-horizontal-stepper>
+            <mat-step>
+                <ng-template matStepLabel>Step 1</ng-template>
+                <mat-icon class="material-icons" matTooltip="Falling Knife means a stock that has corrected big recently. 
+                        Usually such stocks go further down. 
+                        Its good to stay away from such stocks"> info</mat-icon>
+                    <mat-slide-toggle
+                        #fallingknife
+                        color="primary"
+                        labelPosition='before'>
+                        Are you catching a falling knife
+                    </mat-slide-toggle>
+                    <br>
+                    <div *ngIf="fallingknife.checked">
+                        Why do you think you should catch falling knife?
+                        <mat-form-field>
+                            <textarea matInput placeholder="Reason for conviction" cols="50%"></textarea>
+                        </mat-form-field>    
+                    </div>   
+            </mat-step>
 
 
-    <br>
-    <div>
-        <mat-slide-toggle
-            #promoterpledging
-            color="primary"
-            labelPosition='before'>
-            Is there a promoter share pledging?
-        </mat-slide-toggle>
-        <br><br>
-        <div *ngIf="promoterpledging.checked">
-                Percentage of promoter share pledging?
-                <mat-slider
-                    thumbLabel
-                    [displayWith] = "formatSliderLabel"
-                    tickInterval="10"
-                    min="1"
-                    color="primary"
-                    max="100"></mat-slider>
-            </div>
-    </div>
+            <mat-step>
+                <ng-template matStepLabel>Step 1</ng-template>
+                <div>
+                    <mat-slide-toggle
+                        #operatorstock
+                        color="primary"
+                        labelPosition='before'>
+                        is is an operator driven stock?
+                    </mat-slide-toggle>
+                    <br>
+                    <div *ngIf="operatorstock.checked">
+                        Why do you think engage in operator driven stock?
+                        <mat-form-field>
+                            <textarea matInput placeholder="Reason for conviction" cols="50%"></textarea>
+                        </mat-form-field>    
+                    </div>
+                </div>    
+            </mat-step>
 
-    <div>
-        Based on FII DII and Promoter share holding pattern, what is your conviction?
-        <mat-form-field>
-            <textarea matInput placeholder="Reason for conviction" cols="50%"></textarea>
-        </mat-form-field>    
-    </div>
 
-    <div>
-        <div>
-            Based on PAT on QoQ basis, what is your conviction?
-            <mat-form-field>
-                <textarea matInput placeholder="Reason for conviction" cols="50%"></textarea>
-            </mat-form-field>
-        </div>
-    </div>
+            <mat-step>
+                <ng-template matStepLabel>Step 3</ng-template>
+                <div>
+                    <mat-slide-toggle
+                        #bluechipstock
+                        color="primary"
+                        labelPosition='before'>
+                        is it a blue chip stock?
+                    </mat-slide-toggle>
+                    <br><br>
+                    <div *ngIf="!bluechipstock.checked">
+                        <div>
+                            How much are you convicted if its not blue chip stock?
+                            <mat-slider
+                                thumbLabel
+                                [displayWith] = "formatSliderLabel"
+                                tickInterval="10"
+                                min="1"
+                                color="primary"
+                                max="100"></mat-slider>
+                        </div>
+                        <div>
+                            Why are you so much convicted if its not blue chip stock?
+                            <mat-form-field>
+                                <textarea matInput placeholder="Reason for conviction" cols="50%"></textarea>
+                            </mat-form-field>     
+                        </div>
+                    </div>
+                </div>
+            </mat-step>
 
-    <mat-divider></mat-divider>
-    <br>
-    <div>
-        <mat-slide-toggle
-            #sectoranalysis
-            color="primary"
-            labelPosition='before'>
-            Have you done sector analysis?
-        </mat-slide-toggle>
-        <br>
-        <div *ngIf="sectoranalysis.checked">
-            What is outcome sector analysis?
-            <mat-form-field>
-                <textarea matInput placeholder="result of outcome" cols="50%"></textarea>
-            </mat-form-field>    
-        </div>
-    </div>
 
-    <br>
-    <div>
-        <div>
-            What is outcome peer comparison?
-            <mat-form-field>
-                <textarea matInput placeholder="result of peer comparison" cols="50%"></textarea>
-            </mat-form-field>    
-        </div>
-    </div>
+            <mat-step>
+                <ng-template matStepLabel>Step 3</ng-template>
+                <div>
+                    <mat-slide-toggle
+                        #promoterpledging
+                        color="primary"
+                        labelPosition='before'>
+                        Is there a promoter share pledging?
+                    </mat-slide-toggle>
+                    <br><br>
+                    <div *ngIf="promoterpledging.checked">
+                            Percentage of promoter share pledging?
+                            <mat-slider
+                                thumbLabel
+                                [displayWith] = "formatSliderLabel"
+                                tickInterval="10"
+                                min="1"
+                                color="primary"
+                                max="100"></mat-slider>
+                        </div>
+                </div>
+            
+                <div>
+                    Based on FII DII and Promoter share holding pattern, what is your conviction?
+                    <mat-form-field>
+                        <textarea matInput placeholder="Reason for conviction" cols="50%"></textarea>
+                    </mat-form-field>    
+                </div>
+            
+                <div>
+                    <div>
+                        Based on PAT on QoQ basis, what is your conviction?
+                        <mat-form-field>
+                            <textarea matInput placeholder="Reason for conviction" cols="50%"></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-step>
+
+
+            <mat-step>
+                <ng-template matStepLabel>Step 5</ng-template>
+                <div>
+                    <mat-slide-toggle
+                        #sectoranalysis
+                        color="primary"
+                        labelPosition='before'>
+                        Have you done sector analysis?
+                    </mat-slide-toggle>
+                    <br>
+                    <div *ngIf="sectoranalysis.checked">
+                        What is outcome sector analysis?
+                        <mat-form-field>
+                            <textarea matInput placeholder="result of outcome" cols="50%"></textarea>
+                        </mat-form-field>    
+                    </div>
+                </div>
+        
+                <br>
+                <div>
+                    <div>
+                        What is outcome peer comparison?
+                        <mat-form-field>
+                            <textarea matInput placeholder="result of peer comparison" cols="50%"></textarea>
+                        </mat-form-field>    
+                    </div>
+                </div>
+            </mat-step>
+
+
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                You are now done with fundamental analysis.
+                <button mat-raised-button color="primary">Done</button>
+            </mat-step>
+        </mat-horizontal-stepper>
+
     
-    <mat-divider></mat-divider>
+    
+
+    
+
+
+    
 
 
 
