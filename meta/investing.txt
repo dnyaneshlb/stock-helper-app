@@ -38,11 +38,20 @@ Questions?
 Create a website for this questionaire. Add general analytics to decide what action should be taken.
 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-https://codepen.io/nuriarai/pen/uIrFf
-
-https://codepen.io/ArtemGordinsky/pen/GLkoC
+Technical Analysis :
+	Support Resistance
+	Option Chain Analysis
+	Fibonacci Retracemant
+	Divergence
+	Price Action Strategy
+	Candlestick
+	Trendline
+	Moving Average
+	HeikenAshi Stochastic risk
+	Nifty Corelation
+	Price Volume Breakout
+	Other Setup
+	Done
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -56,3 +65,16 @@ Do you want to manage risk?
 		give Recommendation to buy with 10% of capital  that too with in steps.
 
 Add stepper on each page.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+https://codepen.io/nuriarai/pen/uIrFf
+
+https://codepen.io/ArtemGordinsky/pen/GLkoC
+
+
+Use Raised mdbootstrap buttons on footer
+https://mdbootstrap.com/docs/angular/components/demo/
+
+

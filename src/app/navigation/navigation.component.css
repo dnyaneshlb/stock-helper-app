@@ -15,3 +15,14 @@
   top: 0;
   z-index: 1;
 }
+
+
+#main-content {
+  /* This should be exactly equal to height of footer in footer.css */
+  padding-bottom: 60px;
+}
+
+.side-nav-background {
+  background-color: #757de8;
+}
+

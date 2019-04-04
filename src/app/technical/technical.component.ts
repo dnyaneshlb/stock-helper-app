@@ -25,4 +25,9 @@ export class TechnicalComponent implements OnInit {
     });
   }
 
+
+  goToDecision() {
+    
+  }
+
 }

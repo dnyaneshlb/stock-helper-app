@@ -3,7 +3,9 @@
     <mat-vertical-stepper linear="false">
         <mat-step>
             <ng-template matStepLabel>Support/Resistance</ng-template>
-                Some analysis questions
+                <mat-form-field class="form-field">
+                    <textarea matInput placeholder="Add your analysis"></textarea>
+                </mat-form-field>
             <div>
                 <button mat-button matStepperPrevious>Back</button>
                 <button mat-button matStepperNext>Next</button>
@@ -11,7 +13,19 @@
         </mat-step>
         <mat-step>
                 <ng-template matStepLabel>Option Chain Analysis</ng-template>
-                Some analysis questions
+                <mat-form-field class="form-field">
+                        <textarea matInput placeholder="Add your analysis"></textarea>
+                    </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+                </div>    
+        </mat-step>
+        <mat-step>
+                <ng-template matStepLabel>Fibonacci Retracement</ng-template>
+                <mat-form-field class="form-field">
+                        <textarea matInput placeholder="Add your analysis"></textarea>
+                </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button matStepperNext>Next</button>
@@ -19,7 +33,9 @@
         </mat-step>
         <mat-step>
                 <ng-template matStepLabel>Divergence</ng-template>
-                Some analysis questions
+                <mat-form-field class="form-field">
+                        <textarea matInput placeholder="Add your analysis"></textarea>
+                </mat-form-field>
                 <div>
                         <button mat-button matStepperPrevious>Back</button>
                         <button mat-button matStepperNext>Next</button>
@@ -27,7 +43,9 @@
         </mat-step>
         <mat-step>
                 <ng-template matStepLabel>Price Action Strategy</ng-template>
-                Some analysis questions
+                <mat-form-field class="form-field">
+                        <textarea matInput placeholder="Add your analysis"></textarea>
+                </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button matStepperNext>Next</button>
@@ -35,7 +53,9 @@
         </mat-step>
         <mat-step>
                 <ng-template matStepLabel>Candlestick</ng-template>
-                Some analysis questions
+                <mat-form-field class="form-field">
+                        <textarea matInput placeholder="Add your analysis"></textarea>
+                </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button matStepperNext>Next</button>
@@ -43,7 +63,9 @@
         </mat-step>
         <mat-step>
                 <ng-template matStepLabel>Trendline</ng-template>
-                Some analysis questions
+                <mat-form-field class="form-field">
+                        <textarea matInput placeholder="Add your analysis"></textarea>
+                </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button matStepperNext>Next</button>
@@ -51,7 +73,9 @@
         </mat-step>
         <mat-step>
                 <ng-template matStepLabel>Moving Average</ng-template>
-                Some analysis questions
+                <mat-form-field class="form-field">
+                        <textarea matInput placeholder="Add your analysis"></textarea>
+                </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button matStepperNext>Next</button>
@@ -59,7 +83,9 @@
         </mat-step>
         <mat-step>
                 <ng-template matStepLabel>HeikenAshi Stochatic RSI</ng-template>
-                Some analysis questions
+                <mat-form-field class="form-field">
+                        <textarea matInput placeholder="Add your analysis"></textarea>
+                </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button matStepperNext>Next</button>
@@ -67,7 +93,9 @@
         </mat-step>
         <mat-step>
                 <ng-template matStepLabel>Nifty Corelation</ng-template>
-                Some analysis questions
+                <mat-form-field class="form-field">
+                        <textarea matInput placeholder="Add your analysis"></textarea>
+                </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button matStepperNext>Next</button>
@@ -75,7 +103,9 @@
         </mat-step>
         <mat-step>
                 <ng-template matStepLabel>Other Setup</ng-template>
-                Some analysis questions
+                <mat-form-field class="form-field">
+                        <textarea matInput placeholder="Add your analysis"></textarea>
+                </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button matStepperNext>Next</button>
@@ -83,8 +113,8 @@
         </mat-step>
         <mat-step>
             <ng-template matStepLabel>Done</ng-template>
-            You are now done with technical analysis.
-            <button mat-raised-button color="primary" (click)="openSnackBar()" >Done</button>
+            Done with technical analysis.
+            <button mat-raised-button color="primary" [routerLink]="['/decision']" (click)="openSnackBar();goToDecision()" >Done</button>
         </mat-step>
     </mat-vertical-stepper>
     <!-- Need to implement custom pipe -->

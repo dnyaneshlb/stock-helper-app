@@ -19,7 +19,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" class="mat-elevation-z8">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -29,16 +29,13 @@
       </button>
       <span>Helper App</span>
     </mat-toolbar>
+    
     <!-- Main Content starts -->
-    <router-outlet></router-outlet>
+    <div id="main-content">
+      <router-outlet></router-outlet>
+    </div>
     <!-- Main Content ends -->
     
-    <!-- Footer Starts Here -->
-    <footer layout="row" class="md-padding">
-        <div>
-          <p>Footer Contents</p>
-        </div>
-      </footer>
-    <!-- Footer Ends Here -->
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

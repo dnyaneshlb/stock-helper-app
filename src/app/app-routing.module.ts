@@ -1,3 +1,4 @@
+import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { StockSelectorComponent } from './stock-selector/stock-selector.component';
 import { FundamentalComponent } from './fundamental/fundamental.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
             {
               path : 'decision',
               component: DecisionComponent
+            },
+            {
+              path : 'about',
+              component: AboutComponent
             }
           ]
         }

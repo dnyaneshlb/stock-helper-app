@@ -29,6 +29,8 @@ import { TechnicalComponent } from './technical/technical.component';
 import { StockSelectorComponent } from './stock-selector/stock-selector.component';
 import { HomeComponent } from './home/home.component';
 import { DecisionComponent } from './decision/decision.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { DecisionComponent } from './decision/decision.component';
     TechnicalComponent,
     StockSelectorComponent,
     HomeComponent,
-    DecisionComponent
+    DecisionComponent,
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,23 @@
 <div id="homecomponent">
   
-  <button mat-raised-button color="primary" class="nav-item nav-link-edit" [routerLink]="['/selectstock']" routerLinkActive="router-link-active" >Lets Get Started</button>
+  <div style="background-color:#3f51b5; width: 100%; height: 300px;">
+      <div style="color:white; padding:5% 20%; text-align: center">
+        <span style="font-size:250%;">Helper App</span>
+        <br>
+        <br>
+        <span style="font-size:100%;">App to get you started from novice to pro</span>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button mat-raised-button  class="nav-item nav-link-edit" [routerLink]="['/selectstock']" routerLinkActive="router-link-active" >Lets Get Started</button>
+      </div>
+  </div>
     
+
+  <div layout="column">
+      <div flex style="border: 1px solid black;">First item in row</div>
+      <div flex style="border: 1px solid black;">Second item in row</div>
+  </div>
+
 </div>

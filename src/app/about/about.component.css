@@ -1,0 +1,13 @@
+.about-me-card {
+    max-width: 400px;
+  }
+  
+  .about-me-header-image {
+    background-image: url('../../assets/images/me.jpg');
+    background-size: cover;
+  }
+
+  .center-div {
+    margin: 0 auto;
+    width: 400px;
+  }
