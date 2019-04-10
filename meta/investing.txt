@@ -60,9 +60,11 @@ TODO :
 Do you want to manage risk?
 		Capital?
 		Stock LTP?
-		give Recommendation to buy with 10% of capital  that too with in steps.
+		give Recommendation to buy with 10% of capital that too with in steps.
 
 On technnical page, give link to go to investing.com
+
+add progress bar <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
