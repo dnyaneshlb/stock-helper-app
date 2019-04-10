@@ -1,12 +1,79 @@
-What is the outcome of technical analysis? BUY NO BUY CONFUSED
+<mat-grid-list cols="2" rowHeight="1:1" class="result-grid">
+	<mat-grid-tile>
+		<mat-card class="result-card mat-elevation-z14 result-card-fundamental"   
+			[style.background]="getFundamentalResultBackground()"
+			>
+			<mat-card-header>
+				<mat-card-title>
+					<mat-icon *ngIf="fanswered>5" color="white">thumb_up</mat-icon>
+					<mat-icon *ngIf="fanswered<=5">thumb_down</mat-icon>
+					Fundamental Analysis
+				</mat-card-title>
+			  </mat-card-header>
+			  <mat-card-content>
+			  	<mat-list>
+					<mat-list-item>
+						{{fanswered}} out of {{totalFundamentalquestions}} questions answered.
+						<mat-divider inset="true"></mat-divider>
+					</mat-list-item>
+					<mat-list-item *ngIf="fanswered<=5">
+							You must answer at least 10 questions. 
+							<mat-divider inset="true"></mat-divider>
+					</mat-list-item>
+					<mat-list-item *ngIf="fanswered>5">
+							Good Job! 
+							<mat-divider inset="true"></mat-divider>
+					</mat-list-item>
+				</mat-list>	  
+			  </mat-card-content>
+			  <mat-card-actions>
+				<button mat-stroked-button 
+					color="primary" 
+					[routerLink]="['/fundamental']">
+					Review
+				</button>
+			  </mat-card-actions>
+		</mat-card>
+	</mat-grid-tile>
+	<mat-grid-tile>
+		<mat-card class="result-card mat-elevation-z14 result-card-technical" [style.background]="getTechnicalResultBackground()">
+			<mat-card-header>
+				<mat-card-title>
+					<mat-icon *ngIf="tanswered>5">thumb_up</mat-icon>
+					<mat-icon *ngIf="tanswered<=5">thumb_down</mat-icon>
+					Technical Analysis
+				</mat-card-title>
+			  </mat-card-header>
+			  <mat-card-content>
+				<mat-list>
+					<mat-list-item>
+						{{tanswered}} out of {{totalTechnicalquestions}} questions answered.
+						<mat-divider inset="true"></mat-divider>
+					</mat-list-item>
+					<mat-list-item *ngIf="tanswered<=5">
+							You must answer at least 10 questions. 
+							<mat-divider inset="true"></mat-divider>
+					</mat-list-item>
+					<mat-list-item *ngIf="tanswered>5">
+							Good Job! 
+							<mat-divider inset="true"></mat-divider>
+					</mat-list-item>
+				</mat-list>
+			  </mat-card-content>
+			  <mat-card-actions>
+				<button mat-stroked-button 
+					color="primary" 
+					[routerLink]="['/technical']">
+						Review
+					</button>
+			  </mat-card-actions>
+		</mat-card>
+	</mat-grid-tile>
+</mat-grid-list>
 
-<br><br><br>
-What is the outcome of fundamental analysis? BUY NO BUY CONFUSED
 
-<br><br><br>
-Do you want to manage risk?
-		Capital?
-		Stock LTP?
 
-		<br><br>
-		give Recommendation to buy with 10% of capital  that too with in steps.
+
+
+
+

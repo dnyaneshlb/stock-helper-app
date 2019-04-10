@@ -56,15 +56,13 @@ Technical Analysis :
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 TODO : 
-Decision page
-What is the outcome of technical analysis? BUY NO BUY CONFUSED
-What is the outcome of fundamental analysis? BUY NO BUY CONFUSED
+
 Do you want to manage risk?
 		Capital?
 		Stock LTP?
 		give Recommendation to buy with 10% of capital  that too with in steps.
 
-Add stepper on each page.
+On technnical page, give link to go to investing.com
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 

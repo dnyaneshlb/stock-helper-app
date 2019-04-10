@@ -16,11 +16,14 @@ import {MatButtonModule,
     MatToolbarModule,
     MatInputModule,
     MatCheckboxModule,
+    MatGridListModule,
     MatSlideToggleModule,
     MatSliderModule,
     MatTooltipModule,
     MatStepperModule,
-    MatSnackBarModule
+    MatBadgeModule,
+    MatSnackBarModule,
+    MatDialogModule
   } from '@angular/material';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -31,6 +34,7 @@ import { HomeComponent } from './home/home.component';
 import { DecisionComponent } from './decision/decision.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { AppIntroComponent } from './app-intro/app-intro.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,8 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     DecisionComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    AppIntroComponent
   ],
   imports: [
     BrowserModule,
@@ -52,12 +57,13 @@ import { AboutComponent } from './about/about.component';
     MatListModule, MatSidenavModule, MatToolbarModule,
     MatSliderModule, MatTooltipModule, MatStepperModule,
     MatInputModule, MatSlideToggleModule, MatSnackBarModule,
-    MatCheckboxModule,
+    MatCheckboxModule, MatDialogModule, MatBadgeModule,
+    MatGridListModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     LayoutModule,
     MatFormFieldModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, AppIntroComponent]
 })
 export class AppModule { }

@@ -1,3 +1,5 @@
+import { CommonService } from './../services/common.service';
+import { MatSnackBar } from '@angular/material';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +11,9 @@ export class AboutComponent implements OnInit {
 
   likes = 0;
 
-  constructor() { }
+  constructor(private snackBar: MatSnackBar, private commonService: CommonService) { }
+
+  mylikes = this.commonService.likes;
 
   ngOnInit() {
     // this.likes = some http call to fetch likes
@@ -20,7 +24,15 @@ export class AboutComponent implements OnInit {
   }
 
   likeplus() {
-    this.likes++;
+    this.commonService.likes++;
+    this.mylikes++;
   }
 
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open('Liked', 'Done', {
+      duration : 500,
+      verticalPosition : 'bottom',
+      horizontalPosition : 'center'
+    });
+  }
 }

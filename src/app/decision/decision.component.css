@@ -1,0 +1,18 @@
+.result-grid {
+    margin-top: -8%;
+}
+
+.result-card {
+    width: 100%;
+    padding: 10%;
+}
+
+.result-card-fundamental {
+    margin-left: 10%;
+    margin-right: 2%;
+}
+
+.result-card-technical {
+    margin-right: 10%;
+    margin-left: 2%;
+}

@@ -15,8 +15,8 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-icon-button aria-label="Example icon-button with a heart icon">
-              <mat-icon color="primary">favorite</mat-icon>
+          <button mat-icon-button aria-label="click to like my work." (click)="likeplus();openSnackBar();">
+              <mat-icon color="primary" [(matBadge)]="mylikes" matBadgeColor="warn">favorite</mat-icon>
           </button>
           <button mat-button color="primary" (click)="navigateToGit()">Github</button>
           <button mat-button color="primary">Portfolio</button>
