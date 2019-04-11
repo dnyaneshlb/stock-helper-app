@@ -72,13 +72,23 @@
 </mat-grid-list>
 
 <div id="recommendations">
-	<div id="go-recommendations">
-		Now that you are ready to go, lets do some risk management!
+	<div id="go-recommendations" *ngIf="fanswered> 5 && tanswered> 5">
+		<mat-card>
+			<mat-card-content>
+				<p>Good Job!</p>
+				<p>Now that you are ready to go, lets do some risk management!</p>
+			</mat-card-content>
+		</mat-card>
 	</div>
 
 	<br><br><br>
-	<div id="no-go-recommendations">
-		This is not good. You should not bet. Take out some time and analyse your stock. homework always helps.
+	<div id="no-go-recommendations" *ngIf="fanswered<= 5 && tanswered<= 5">
+		<mat-card>
+			<mat-card-content>
+				<p>Opps!</p> 
+				<p>You should not bet. Take out some time and analyse your stock. homework always helps.</p> 
+			</mat-card-content>
+		</mat-card>
 	</div>
 
 </div>

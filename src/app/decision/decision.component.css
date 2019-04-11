@@ -1,5 +1,6 @@
 .result-grid {
     margin-top: -8%;
+    padding-bottom: -20%;
 }
 
 .result-card {
@@ -15,4 +16,8 @@
 .result-card-technical {
     margin-right: 10%;
     margin-left: 2%;
+}
+
+#recommendations {
+    margin: -5% 5% 5% 5%;
 }
