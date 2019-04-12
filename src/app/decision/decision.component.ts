@@ -1,5 +1,6 @@
 import { CommonService } from './../services/common.service';
 import { Component, OnInit } from '@angular/core';
+import { MatSliderChange } from '@angular/material';
 
 @Component({
   selector: 'app-decision',
@@ -19,6 +20,7 @@ export class DecisionComponent implements OnInit {
   tanswered = 0;
   totalFundamentalquestions = 0;
   totalTechnicalquestions = 0;
+  advisedRiskCapital = 20;
 
   ngOnInit() {
   }
@@ -35,6 +37,24 @@ export class DecisionComponent implements OnInit {
       return '#4CAF50';
     }
     return '#FF5252';
+  }
+
+  formatCapitalSliderLabel(value: number | null){
+    if (!value) {
+      return '0';
+    }
+
+    if (value > 100) {
+      return Math.round(value / 100) + 'L';
+    } else {
+      return value + 'k';
+    }
+  }
+
+  manageRisk(event: MatSliderChange | null){
+    console.log('manage risk'+ event.value);
+    let capital: number = event.value;
+    this.advisedRiskCapital = Math.round(capital / 5) ;
   }
 
 }

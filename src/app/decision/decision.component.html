@@ -73,11 +73,34 @@
 
 <div id="recommendations">
 	<div id="go-recommendations" *ngIf="fanswered> 5 && tanswered> 5">
-		<mat-card>
+		<mat-card class="mat-elevation-z10">
 			<mat-card-content>
-				<p>Good Job!</p>
-				<p>Now that you are ready to go, lets do some risk management!</p>
+				<p>Good Job! You are ready to go.</p>
+				<p>Lets do some risk management!</p>
+				<mat-divider inset="true"></mat-divider>
+				<br>
+				<mat-label>Capital     :</mat-label>
+				<mat-slider 
+					thumbLabel
+					(input)="manageRisk($event)"
+					tickInterval="5"
+					[displayWith] = "formatCapitalSliderLabel"
+					min="1"
+					color="primary"
+					max="1000"
+					value="100"
+					style="width:80%"></mat-slider>
+				<div>
+					<p> Maximum Risk you can take is 20%</p>	
+					<p> You should invest maximum <b>{{advisedRiskCapital}}k </b>Rs.</p>
+				</div>	
 			</mat-card-content>
+			<mat-card-actions>
+				<button mat-stroked-button 
+					color="primary">
+						Know More..
+				</button>
+			</mat-card-actions>
 		</mat-card>
 	</div>
 
@@ -90,7 +113,6 @@
 			</mat-card-content>
 		</mat-card>
 	</div>
-
 </div>
 
 
