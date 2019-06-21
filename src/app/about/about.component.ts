@@ -33,7 +33,7 @@ export class AboutComponent implements OnInit {
         error => console.log('Error occured while getting response from server : ' + error)
     );
 
-    /* error handling woth pipe */
+    /* error handling with pipe */
     this.http.get('https://api.github.com/users/dnyaneshlb').pipe(retry(3), catchError(this.handleError));
 
     window.open('https://github.com/dnyaneshlb', '_blank');
