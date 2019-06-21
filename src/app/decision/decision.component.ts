@@ -51,7 +51,7 @@ export class DecisionComponent implements OnInit {
     }
   }
 
-  manageRisk(event: MatSliderChange | null){
+  manageRisk(event: MatSliderChange | null) : void {
     console.log('manage risk'+ event.value);
     let capital: number = event.value;
     this.advisedRiskCapital = Math.round(capital / 5) ;

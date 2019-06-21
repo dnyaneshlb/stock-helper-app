@@ -7,6 +7,7 @@ export class CommonService {
 
   constructor() { }
 
+  public isAuthenticated = false;
   public isFirstTimeUser = true;
   public likes = 0;
   public noOfFundamentalQuestionsAnswered = 10;

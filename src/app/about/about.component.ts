@@ -1,6 +1,9 @@
 import { CommonService } from './../services/common.service';
 import { MatSnackBar } from '@angular/material';
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { catchError, retry } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-about',
@@ -11,7 +14,7 @@ export class AboutComponent implements OnInit {
 
   likes = 0;
 
-  constructor(private snackBar: MatSnackBar, private commonService: CommonService) { }
+  constructor(private snackBar: MatSnackBar, private commonService: CommonService, private http: HttpClient) { }
 
   mylikes = this.commonService.likes;
 
@@ -20,10 +23,23 @@ export class AboutComponent implements OnInit {
   }
 
   navigateToGit() {
+    /* without error handling */
+    this.http.get('https://api.github.com/users/dnyaneshlb').subscribe( response => console.log(response));
+
+
+    /* with error handling */
+    this.http.get('https://api.github.com/users/dnyaneshlb').subscribe(
+        response => console.log(response),
+        error => console.log('Error occured while getting response from server : ' + error)
+    );
+
+    /* error handling woth pipe */
+    this.http.get('https://api.github.com/users/dnyaneshlb').pipe(retry(3), catchError(this.handleError));
+
     window.open('https://github.com/dnyaneshlb', '_blank');
   }
 
-  likeplus() {
+  privatelikeplus() {
     this.commonService.likes++;
     this.mylikes++;
   }
@@ -34,5 +50,11 @@ export class AboutComponent implements OnInit {
       verticalPosition : 'bottom',
       horizontalPosition : 'center'
     });
+  }
+
+
+  private handleError(error: HttpErrorResponse){
+    console.error('Internal Server Error');
+    return throwError('some problem with site.');
   }
 }

@@ -7,6 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TechnicalComponent } from './technical/technical.component';
 import { DecisionComponent } from './decision/decision.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
         {
@@ -19,7 +20,7 @@ const routes: Routes = [
             },
             {
               path : 'fundamental',
-              component: FundamentalComponent
+              component: FundamentalComponent,
             },
             {
               path : 'technical',
@@ -31,7 +32,8 @@ const routes: Routes = [
             },
             {
               path : 'decision',
-              component: DecisionComponent
+              component: DecisionComponent,
+              canActivate : [AuthGuard]
             },
             {
               path : 'about',
